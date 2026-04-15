@@ -238,8 +238,8 @@ CREATE TABLE InvoiceDetails(
     InvoiceID int(11),
     ProductNumber varchar(50),
     OrderQty int(11),
-    UnitPrice decimal(19, 2),
-    LineTotal decimal(19, 2),
+    UnitPrice decimal(18, 2),
+    LineTotal decimal(18, 2),
     PRIMARY KEY (InvoiceDetailsID),
     FOREIGN KEY (InvoiceID) REFERENCES Invoices(InvoiceID),
     FOREIGN KEY (ProductNumber) REFERENCES Products(ProductNumber)
@@ -258,5 +258,5 @@ VALUES
 SHOW TABLES;
 SELECT * FROM Customers;
 SELECT * FROM Invoices;
-SELECT * FROM Products LIMT 10;
+SELECT * FROM Products LIMIT 10;
 SELECT * FROM InvoiceDetails;
