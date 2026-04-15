@@ -239,7 +239,7 @@ CREATE TABLE InvoiceDetails(
     ProductNumber varchar(50),
     OrderQty int(11),
     UnitPrice decimal(19, 2),
-    LineTotal decimal(19, 2),
+    LineTotal decimal(18, 2),
     PRIMARY KEY (InvoiceDetailsID),
     FOREIGN KEY (InvoiceID) REFERENCES Invoices(InvoiceID),
     FOREIGN KEY (ProductNumber) REFERENCES Products(ProductNumber)
